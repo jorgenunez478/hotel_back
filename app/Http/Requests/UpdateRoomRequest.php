@@ -23,9 +23,9 @@ class UpdateRoomRequest extends FormRequest
     {
         return [
             'count' => ['required'],
-            'hotel' => ['required'],
-            'room_type' => ['required'],
-            'accommodation' => ['required']
+            'hotel_id' => ['required'],
+            'room_type_id' => ['required'],
+            'accommodation_id' => ['required']
         ];
     }
 }

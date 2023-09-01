@@ -6,6 +6,7 @@ use App\Models\Hotel;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreHotelRequest;
 use App\Http\Requests\UpdateHotelRequest;
+use Termwind\Components\Hr;
 
 class HotelController extends Controller
 {
@@ -36,7 +37,7 @@ class HotelController extends Controller
     public function store(StoreHotelRequest $request)
     {
         try { 
-            $hotel = Hotel::create($request->all());
+            $hotel = Hotel::firstOrCreate($request->all());
             return response()->json($hotel, 200);
         } catch (\Throwable $th) {
             return response()->json([ 'error' => $th->getMessage()], 500);

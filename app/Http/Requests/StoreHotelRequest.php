@@ -26,7 +26,7 @@ class StoreHotelRequest extends FormRequest
             'address' => ['required', 'max:270'],
             'nit' => ['required'],
             'number_rooms' => ['required'],
-            'city' => ['required'],
+            'city_id' => ['required'],
         ];
     }
 }

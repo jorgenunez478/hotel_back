@@ -57,6 +57,7 @@ Route::controller(HotelController::class)->group(function(){
 });
 
 Route::controller(RoomController::class)->group(function(){
+    Route::get('roomByHotel/{id}', 'indexByHotel');
     Route::get('room', 'index');
     Route::get('room/{id}', 'show');
     Route::post('room', 'store');
